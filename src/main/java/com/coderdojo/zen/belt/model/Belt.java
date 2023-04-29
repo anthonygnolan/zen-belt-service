@@ -1,62 +1,26 @@
 package com.coderdojo.zen.belt.model;
 
-import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
-@Table(name = "BADGES")
+@Document(value = "belt")
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
 public class Belt {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
-    private Long id;
+    private String id;
 
-    @Column(name = "NAME")
     private String name;
 
-    @Column(name = "DESCRIPTION")
     private String description;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "CATEGORY")
-    private Category category;
-
-    public Belt() {}
-
-    public Belt(Long id, String name, String description, Category category) {
-
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.category = category;
-    }
-
-    public Long getId() {
-        return this.id;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Category getCategory() {
-        return this.category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
+    private String imageURL;
 
 }

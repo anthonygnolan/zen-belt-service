@@ -1,11 +1,7 @@
 package com.coderdojo.zen.belt.repositories;
 
 import com.coderdojo.zen.belt.model.Belt;
-import com.coderdojo.zen.belt.model.Category;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-import java.util.List;
-
-public interface BeltRepository extends JpaRepository<Belt, Long> {
-    List<Belt> findByCategory(Category category);
+public interface BeltRepository extends MongoRepository<Belt, Long> {
 }
