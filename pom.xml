@@ -8,10 +8,10 @@
         <version>3.0.6</version>
     </parent>
     <groupId>com.coderdojo</groupId>
-    <artifactId>zen-belt-service</artifactId>
+    <artifactId>belt-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Belt Service</name>
-    <description>zen-belt-service</description>
+    <description>belt-service</description>
     <properties>
         <java.version>17</java.version>
         <sonar.organization>coderdojo-ennis</sonar.organization>
